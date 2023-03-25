@@ -1,12 +1,16 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+
 import { ElButton } from 'element-plus'
+import Header from './components/Header/Header.vue'
 </script>
 
 <template>
   <div>
     <el-button>我是 ElButton</el-button>
   </div>
+  <Header/>
+  
+  <router-view/>
 </template>
 
 <style scoped>
