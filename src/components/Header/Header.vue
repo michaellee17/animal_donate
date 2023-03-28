@@ -2,6 +2,11 @@
 import { ref } from 'vue';
 
 const isOpen = ref(false);
+const aboutOpen = ref(false);
+const donateOpen = ref(false);
+const publicOpen = ref(false);
+const loginOpen = ref(false);
+
 </script>
 <template>
     <nav class="navbar">
@@ -15,21 +20,38 @@ const isOpen = ref(false);
         </button>
         <ul class="navbar-menu"  v-show="isOpen">
             <li><router-link to="/">home</router-link></li>
-            <li><router-link to="/about">關於協會</router-link></li>
-            <li><router-link to="/donate">線上捐款</router-link></li>
+            <li><router-link to="/about">關於協會</router-link><span class="more" @click="aboutOpen = !aboutOpen">></span>
+              <div v-if="aboutOpen">subMenu</div>
+            </li>
+            <li><router-link to="/donate">線上捐款</router-link><span class="more" @click="donateOpen = !donateOpen">></span>
+              <div v-if="donateOpen">subMenu</div>
+            </li>
             <li><router-link to="/food">線上捐糧</router-link></li>
             <li><router-link to="/feed">線上助養</router-link></li>
-            <li><router-link to="/public">公益義賣</router-link></li>
+            <li><router-link to="/public">公益義賣</router-link><span class="more" @click="publicOpen = !publicOpen">></span>
+              <div v-if="publicOpen">subMenu</div>
+            </li>
             <li><router-link to="/volunteer">志工招募</router-link></li>
             <li><router-link to="/contact">聯絡我們</router-link></li>
-            <li><router-link to="/login">登入</router-link></li>
+            <li><router-link to="/login">登入</router-link><span class="more" @click="loginOpen = !loginOpen">></span>
+              <div v-if="loginOpen">subMenu</div>
+            </li>
         </ul>
     </nav>
 </template>
 <style scoped>
+.more{
+  margin-left:10px;
+  font-weight:bold;
+  font-size:28px;
+  vertical-align: top;
+}
+
 a {
   text-decoration-line: none; /* 拿掉底線 */
   color:white;
+  font-size:20px;
+  
 }
 .navbar {
   display: flex;
