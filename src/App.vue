@@ -2,6 +2,7 @@
 
 import { ElButton } from 'element-plus'
 import Header from './components/Header/Header.vue'
+import Footer from './components/Footer/Footer.vue'
 </script>
 
 <template>
@@ -9,9 +10,16 @@ import Header from './components/Header/Header.vue'
   <Header/>
   
   <router-view/>
+
+  <Footer/>
+
 </template>
 
-<style scoped>
+<style>
+*{
+  margin:0;
+  padding:0;
+}
 .logo {
   height: 6em;
   padding: 1.5em;

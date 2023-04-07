@@ -10,15 +10,16 @@ const loginOpen = ref(false);
 </script>
 <template>
   <nav class="navbar">
-    <button class="navbar-toggle" @click="isOpen = !isOpen" :class="{ open: isOpen }">
+    <!-- <button class="navbar-toggle" @click="isOpen = !isOpen" :class="{ open: isOpen }">
       <span class="hamburger">
         <div></div>
         <div></div>
         <div></div>
       </span>
-    </button>
-    <span class="title">台灣有點溫暖毛孩協會</span>
-    <ul class="navbar-menu" v-show="isOpen">
+    </button> -->
+    <span @click="isOpen = !isOpen"><img src="../../assets/hamburger.svg" alt=""></span>
+    <span class="title"><img src="../../assets/title.svg" alt=""></span>
+    <ul class="navbar-menu" v-if="isOpen">
       <li><router-link to="/">home</router-link></li>
       <li><router-link to="/about">關於協會</router-link><span class="more" @click="aboutOpen = !aboutOpen"><i
             class="fa-solid fa-greater-than"></i></span></li>
@@ -62,16 +63,15 @@ a {
 }
 
 .navbar {
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
   padding: 10px;
-
 }
 
 .navbar-menu {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: rgb(15, 15, 15);
 }
 
 .navbar-menu li {
@@ -91,42 +91,11 @@ a {
 
 .hamburger {
   display: block;
-  width: 24px;
-  height: 16px;
+  width: 14px;
+  height: 11px;
   position: relative;
 }
 
-.hamburger div {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  transition: all 0.2s ease-in-out;
-}
 
-.hamburger div:nth-child(1) {
-  top: 0;
-}
 
-.hamburger div:nth-child(2) {
-  top: 7px;
-}
-
-.hamburger div:nth-child(3) {
-  bottom: 0;
-}
-
-.open .hamburger div:nth-child(1) {
-  transform: rotate(45deg);
-  top: 7px;
-}
-
-.open .hamburger div:nth-child(2) {
-  opacity: 0;
-}
-
-.open .hamburger div:nth-child(3) {
-  transform: rotate(-45deg);
-  bottom: 7px;
-}
 </style>
