@@ -17,8 +17,10 @@ const loginOpen = ref(false);
         <div></div>
       </span>
     </button> -->
-    <span @click="isOpen = !isOpen"><img src="../../assets/hamburger.svg" alt=""></span>
-    <span class="title"><img src="../../assets/title.svg" alt=""></span>
+    <div class="ham_tilte_wrap">
+      <div @click="isOpen = !isOpen"><img src="../../assets/hamburger.svg" alt=""></div>
+      <div class="title"><img src="../../assets/title.svg" alt=""></div>
+    </div>
     <ul class="navbar-menu" v-if="isOpen">
       <li><router-link to="/">home</router-link></li>
       <li><router-link to="/about">關於協會</router-link><span class="more" @click="aboutOpen = !aboutOpen"><i
@@ -41,8 +43,14 @@ const loginOpen = ref(false);
   </nav>
 </template>
 <style scoped>
+
+.ham_tilte_wrap{
+  display: flex;
+  padding: 10px;
+}
 .title{
-  margin-left:70px;
+  width: 100%;
+  text-align: center;
 }
 .more {
   padding-top: 2px;
@@ -64,7 +72,6 @@ a {
 
 .navbar {
   background-color: #fff;
-  padding: 10px;
 }
 
 .navbar-menu {
