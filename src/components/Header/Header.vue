@@ -10,13 +10,6 @@ const loginOpen = ref(false);
 </script>
 <template>
   <nav class="navbar">
-    <!-- <button class="navbar-toggle" @click="isOpen = !isOpen" :class="{ open: isOpen }">
-      <span class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </span>
-    </button> -->
     <div class="ham_tilte_wrap">
       <div @click="isOpen = !isOpen"><img src="../../assets/hamburger.svg" alt=""></div>
       <div class="title"><img src="../../assets/title.svg" alt=""></div>

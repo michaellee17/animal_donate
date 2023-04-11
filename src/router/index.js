@@ -8,7 +8,7 @@ import Public from '../views/Public.vue';
 import Volunteer from '../views/Volunteer.vue';
 import Contact from '../views/Contact.vue';
 import Login from '../views/Login.vue';
-
+import More from '../views/More.vue';
 const routes = [
   {
     path: '/',
@@ -47,13 +47,18 @@ const routes = [
   },
   {
     path: '/contact',
-    name: 'Vontact',
+    name: 'Contact',
     component: Contact
   },
   {
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/more',
+    name: 'More',
+    component: More
   },
 ];
 
