@@ -3,15 +3,17 @@
 </script>
 <template>
     <div class="footer">
-        <div class="notice">
-            <p>如有需要救援、中途安置、弱勢園區請聯繫我們</p>
-            <p>E-mail：warmdog2021@gmail.com</p>
-            <p>LINE@：@warm.tw</p>
-        </div>
-        <div class="company">
-            <p>社團法人台灣有點溫暖毛孩協會</p>
-            <p>協會立案字號：台內團字第1090074606號</p>
-            <p>勸募許可文號：衛部救字第1101361315號</p>
+        <div class="footer_text">
+            <div class="notice">
+                <div>如有需要救援、中途安置、弱勢園區請聯繫我們</div>
+                <div>E-mail：warmdog2021@gmail.com</div>
+                <div>LINE@：@warm.tw</div>
+            </div>
+            <div class="company">
+                <div>社團法人台灣有點溫暖毛孩協會&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
+                <div>協會立案字號：台內團字第1090074606號</div>
+                <div>勸募許可文號：衛部救字第1101361315號</div>
+            </div>
         </div>
         <div class="flogo">
             <img src="../../assets/footer.svg" alt="">
@@ -30,7 +32,6 @@
         padding-top: 0px;
         display: flex;
         justify-content: center;
-        padding-bottom: 22px;
     }
     .icons{
         display: flex;
@@ -43,8 +44,7 @@
     .flogo{
         display: flex;
         justify-content: center;
-        padding-bottom: 10px;
-        padding-top: 20px;
+        margin: 20px 0 10px 0;
     }
     .logof img{
         width: 92px;
@@ -53,20 +53,26 @@
     .footer{
         height: 100%;
         width: 100%; 
-        background-color:rgb(217, 208, 199) ;    
+        background-color:rgb(217, 208, 199);
+        padding: 22px 0;
     }
     .notice{
         line-height: 18px;
         font-size: 13px;
         text-align: left;
         color: white;
-        padding: 16px 55px 9px 80px;
+        margin-bottom: 15px;
     }
     .company{
         line-height: 18px;
         font-size: 13px;
         text-align: left;
         color: white;
-        padding: 0px 55px 0px 80px;
+    }
+    .footer_text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 </style>

@@ -128,6 +128,7 @@ section {
     cursor: pointer;
     display: block;
     text-decoration: none;
+    margin-bottom: 5px;
 }
 
 .card {
