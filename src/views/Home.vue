@@ -2,7 +2,7 @@
     <div>
         <img src="../assets/indexTop.png" alt="">
         <div>
-            <video width="100%" controls autoplay muted>
+            <video class="video" controls autoplay muted>
                 <source src="../assets/video.mov" type="video/mp4">
             </video>
         </div>
@@ -13,12 +13,14 @@
                     <img src="../assets/indexCard1.png" alt="">
                     <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
                         建議看法</div>
+                        <hr class="tilte_date_hr">
                     <div class="card_date">2023/04/11</div>
                 </div>
                 <div class="card">
                     <img src="../assets/indexCard2.png" alt="">
                     <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
                         建議看法</div>
+                        <hr class="tilte_date_hr">
                     <div class="card_date">2023/04/11</div>
                 </div>
             </div>
@@ -46,11 +48,16 @@
 </template>
 <style scoped>
 .wrapper {
-    padding: 21px;
+    padding: 25px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.05);
+}
+
+.video{
+    width: 100%;
 }
 
 .foods {
-    padding-top: 13px;
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -64,7 +71,6 @@
 
 .donate_food button {
     width: 125px;
-    height: 20px;
     background-color: rgb(183, 171, 161);
     color: white;
     border-radius: 3px;
@@ -72,6 +78,8 @@
     align-items: center;
     justify-content: center;
     border: none;
+    padding: 5px 0;
+    margin: 5px 0 8px 0;
 }
 
 .donate_food img {
@@ -82,11 +90,13 @@
 .donate_img {
     display: flex;
     justify-content: center;
+    margin: 8px 0;
 }
 
 .donate_img img {
-    width: 187px;
-    height: 47px;
+    width: 188px;
+    height: 48px;
+    object-fit: contain;
 }
 
 .card_section {
@@ -95,24 +105,18 @@
 }
 
 .card_text {
-    padding-top: 12.6px;
-    text-align: left;
     font-size: 8px;
-    line-height: 14.6px;
-    height: 32px;
-    border-bottom: 1px solid #f5f5f5;
+    padding: 10px 15px;
 }
 
 .card_date {
-    padding-top: 12.4px;
-    text-align: left;
+    padding: 20.4px 0px 15.5px 15px;
     font-size: 8px;
     line-height: 9.6px;
     color: rgb(128, 157, 165)
 }
 
 section {
-    /* display:flex; */
     padding: 0px 10px 10px 10px;
 }
 
@@ -128,8 +132,16 @@ section {
 
 .card {
     width: 50%;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.05);
+}
+
+.tilte_date_hr{
+    width: 90%;
+    margin: 0 auto;
 }
 
 img {
     width: 100%;
-}</style>
+    object-fit: contain;
+}
+</style>

@@ -44,7 +44,7 @@
         display: flex;
         justify-content: center;
         padding-bottom: 10px;
-        padding-top: 10px;
+        padding-top: 20px;
     }
     .logof img{
         width: 92px;
@@ -52,21 +52,21 @@
     }
     .footer{
         height: 100%;
-        width: 375px; 
+        width: 100%; 
         background-color:rgb(217, 208, 199) ;    
     }
     .notice{
         line-height: 18px;
-        font-size: 12px;
+        font-size: 13px;
         text-align: left;
         color: white;
-        padding: 16px 55px 9px 55px;
+        padding: 16px 55px 9px 80px;
     }
     .company{
         line-height: 18px;
-        font-size: 12px;
+        font-size: 13px;
         text-align: left;
         color: white;
-        padding: 0px 55px 0px 55px;
+        padding: 0px 55px 0px 80px;
     }
 </style>
