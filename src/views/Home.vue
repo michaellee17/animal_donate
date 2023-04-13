@@ -1,38 +1,53 @@
 <template>
     <div>
         <img src="../assets/indexTop.png" alt="">
-        <div>
-            <video class="video" controls autoplay muted>
-                <source src="../assets/video.mov" type="video/mp4">
-            </video>
-        </div>
-        <section>
-            <router-link to="/more" class="more_text">more ></router-link>
-            <div class="card_section">
-                <div class="card">
-                    <img src="../assets/indexCard1.png" alt="">
-                    <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
-                        建議看法</div>
-                        <hr class="tilte_date_hr">
-                    <div class="card_date">2023/04/11</div>
-                </div>
-                <div class="card">
-                    <img src="../assets/indexCard2.png" alt="">
-                    <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
-                        建議看法</div>
-                        <hr class="tilte_date_hr">
-                    <div class="card_date">2023/04/11</div>
-                </div>
+        <div class="video_section">
+            <div class="video_div">
+                <video class="video" controls autoplay muted>
+                    <source src="../assets/video.mov" type="video/mp4">
+                </video>
             </div>
-        </section>
+            <section class="top_section">
+                <router-link to="/more" class="more_text">more ></router-link>
+                <div class="card_section">
+                    <div class="card">
+                        <img src="../assets/indexCard1.png" alt="">
+                        <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
+                            建議看法</div>
+                            <hr class="tilte_date_hr">
+                        <div class="card_date">2023/04/11</div>
+                    </div>
+                    <div class="card">
+                        <img src="../assets/indexCard2.png" alt="">
+                        <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
+                            建議看法</div>
+                            <hr class="tilte_date_hr">
+                        <div class="card_date">2023/04/11</div>
+                    </div>
+                </div>
+            </section>
+        </div>
         <section>
             <div class="donate_img">
                 <img src="../assets/indexDonate.png" alt="">
             </div>
+            <router-link to="/more" class="more">more..</router-link>
             <div class="foods">
                 <div class="donate_food">
                     <div class="wrapper">
                         <img src="../assets/donate01.png" alt="">
+                    </div>
+                    <button type="button">線上捐糧</button>
+                </div>
+                <div class="donate_food">
+                    <div class="wrapper">
+                        <img src="../assets/donate02.png" alt="">
+                    </div>
+                    <button type="button">線上捐糧</button>
+                </div>
+                <div class="donate_food">
+                    <div class="wrapper">
+                        <img src="../assets/donate02.png" alt="">
                     </div>
                     <button type="button">線上捐糧</button>
                 </div>
@@ -57,10 +72,23 @@
     width: 100%;
 }
 
+.more{
+    color: red;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: right;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    width: 90%;
+    margin: 5px auto;
+}
 .foods {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 5%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .donate_food {
@@ -79,12 +107,11 @@
     justify-content: center;
     border: none;
     padding: 5px 0;
-    margin: 5px 0 8px 0;
+    margin: 5px auto 8px auto;
 }
 
 .donate_food img {
-    width: 78px;
-    height: 83px;
+    text-align: center;
 }
 
 .donate_img {
@@ -144,5 +171,81 @@ section {
 img {
     width: 100%;
     object-fit: contain;
+}
+
+.donate_food:nth-of-type(n+3){
+    display: none;
+}
+
+@media (min-width: 576px) { 
+    .donate_food:nth-of-type(n-3){
+        display: block;
+    }
+    .donate_food:nth-of-type(n+4){
+        display: none;
+    }
+}
+
+@media (min-width: 768px) { 
+    .donate_food:nth-of-type(n-4){
+        display: block;
+    }
+    .donate_food:nth-of-type(n+5){
+        display: none;
+    }
+}
+
+@media (min-width: 992px) { 
+    .video_div{
+        flex: 1;
+        margin-top: 20px;
+        padding-left: 2px;
+    }
+    .video_section{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .top_section{
+        flex: 1;
+    }
+    .card_text{
+        padding: 17px 25px;
+        font-size: 14px;
+    }
+}
+@media (min-width: 1100px) {
+    .foods {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    width: 80%;
+}
+.more{
+    width: 80%;
+}
+}
+@media (min-width: 1200px) {
+    .foods {
+    display: flex;
+    justify-content: space-between;
+    gap: initial;
+    width: 75%;
+}
+.more{
+    width: 75%;
+}
+}
+@media (min-width: 1600px) {
+    .foods {
+    display: flex;
+    justify-content: space-between;
+    gap: initial;
+    width: 60%;
+}
+.more{
+    width: 60%;
+}
 }
 </style>
