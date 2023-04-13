@@ -75,4 +75,12 @@
         justify-content: center;
         align-items: center;
     }
+
+    @media (min-width: 768px) { 
+        .footer_text{
+        flex-direction: row;
+        gap: 10%;
+        align-items: baseline;
+    }
+    }
 </style>
