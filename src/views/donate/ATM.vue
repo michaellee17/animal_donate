@@ -1,5 +1,5 @@
 <template>
     <div>
-        More
+        ATM
     </div>
 </template>

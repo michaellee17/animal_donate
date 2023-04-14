@@ -1,5 +1,5 @@
 <template>
     <div>
-        More
+        Regular
     </div>
 </template>
