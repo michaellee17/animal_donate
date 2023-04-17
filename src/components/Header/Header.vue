@@ -24,8 +24,8 @@ const resetMenu = ((device) => {
   <nav class="navbar">
     <!-- 桌機板 -->
     <div class="ham_tilte_wrap">
-      <div class="hamburger" @click="isOpen = !isOpen"><img src="../../assets/hamburger.svg" alt=""></div>
-      <div class="title"><router-link to="/" @click="resetMenu('logo')"><img src="../../assets/title.svg" alt=""></router-link>></div>
+      <div class="hamburger" @click="isOpen = !isOpen"><img src="assets/hamburger.svg" alt=""></div>
+      <div class="title"><router-link to="/" @click="resetMenu('logo')"><img src="assets/title.svg" alt=""></router-link>></div>
       <div class="navbar_768">
         <ul class="navbar_768_title">
           <li><router-link to="/about" @click="resetMenu('pc')">關於協會</router-link><span class="more"

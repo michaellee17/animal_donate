@@ -8,7 +8,7 @@ const modules = [Autoplay];
 <template>
     <div>
         <swiper :slides-per-view="1" :modules="modules" :autoplay="{ delay: 3000 }">
-            <swiper-slide><img src="../assets/indexTop.png" alt=""></swiper-slide>
+            <swiper-slide><img src="assets/indexTop.png" alt=""></swiper-slide>
             <swiper-slide>Slide 2</swiper-slide>
             <swiper-slide>Slide 3</swiper-slide>
 
@@ -17,21 +17,21 @@ const modules = [Autoplay];
         <div class="video_section">
             <div class="video_div">
                 <video class="video" controls autoplay muted>
-                    <source src="../assets/video.mov" type="video/mp4">
+                    <source src="assets/video.mov" type="video/mp4">
                 </video>
             </div>
             <section class="top_section">
                 <router-link to="/more" class="more_text">more ></router-link>
                 <div class="card_section">
                     <div class="card">
-                        <img src="../assets/indexCard1.png" alt="">
+                        <img src="assets/indexCard1.png" alt="">
                         <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
                             建議看法</div>
                         <hr class="tilte_date_hr">
                         <div class="card_date">2023/04/11</div>
                     </div>
                     <div class="card">
-                        <img src="../assets/indexCard2.png" alt="">
+                        <img src="assets/indexCard2.png" alt="">
                         <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
                             建議看法</div>
                         <hr class="tilte_date_hr">
@@ -42,31 +42,31 @@ const modules = [Autoplay];
         </div>
         <section>
             <div class="donate_img">
-                <img src="../assets/indexDonate.png" alt="">
+                <img src="assets/indexDonate.png" alt="">
             </div>
             <router-link to="/more" class="more">more..</router-link>
             <div class="foods">
                 <div class="donate_food">
                     <div class="wrapper">
-                        <img src="../assets/donate01.png" alt="">
+                        <img src="assets/donate01.png" alt="">
                     </div>
                     <button type="button">線上捐糧</button>
                 </div>
                 <div class="donate_food">
                     <div class="wrapper">
-                        <img src="../assets/donate02.png" alt="">
+                        <img src="assets/donate02.png" alt="">
                     </div>
                     <button type="button">線上捐糧</button>
                 </div>
                 <div class="donate_food">
                     <div class="wrapper">
-                        <img src="../assets/donate02.png" alt="">
+                        <img src="assets/donate02.png" alt="">
                     </div>
                     <button type="button">線上捐糧</button>
                 </div>
                 <div class="donate_food">
                     <div class="wrapper">
-                        <img src="../assets/donate02.png" alt="">
+                        <img src="assets/donate02.png" alt="">
                     </div>
                     <button type="button">線上捐糧</button>
                 </div>
