@@ -1,6 +1,19 @@
+<script setup>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import {  Autoplay } from 'swiper';
+import 'swiper/css';
+
+const modules = [Autoplay];
+</script>
 <template>
     <div>
-        <img src="../assets/indexTop.png" alt="">
+        <swiper :slides-per-view="1" :modules="modules" :autoplay="{ delay: 3000 }">
+            <swiper-slide><img src="../assets/indexTop.png" alt=""></swiper-slide>
+            <swiper-slide>Slide 2</swiper-slide>
+            <swiper-slide>Slide 3</swiper-slide>
+
+        </swiper>
+        
         <div class="video_section">
             <div class="video_div">
                 <video class="video" controls autoplay muted>
@@ -14,14 +27,14 @@
                         <img src="../assets/indexCard1.png" alt="">
                         <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
                             建議看法</div>
-                            <hr class="tilte_date_hr">
+                        <hr class="tilte_date_hr">
                         <div class="card_date">2023/04/11</div>
                     </div>
                     <div class="card">
                         <img src="../assets/indexCard2.png" alt="">
                         <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
                             建議看法</div>
-                            <hr class="tilte_date_hr">
+                        <hr class="tilte_date_hr">
                         <div class="card_date">2023/04/11</div>
                     </div>
                 </div>
@@ -68,11 +81,11 @@
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.05);
 }
 
-.video{
+.video {
     width: 100%;
 }
 
-.more{
+.more {
     color: red;
     font-size: 14px;
     letter-spacing: 1px;
@@ -83,6 +96,7 @@
     width: 90%;
     margin: 5px auto;
 }
+
 .foods {
     display: flex;
     justify-content: center;
@@ -163,7 +177,7 @@ section {
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.05);
 }
 
-.tilte_date_hr{
+.tilte_date_hr {
     width: 90%;
     margin: 0 auto;
 }
@@ -173,79 +187,89 @@ img {
     object-fit: contain;
 }
 
-.donate_food:nth-of-type(n+3){
+.donate_food:nth-of-type(n+3) {
     display: none;
 }
 
-@media (min-width: 576px) { 
-    .donate_food:nth-of-type(n-3){
+@media (min-width: 576px) {
+    .donate_food:nth-of-type(n-3) {
         display: block;
     }
-    .donate_food:nth-of-type(n+4){
+
+    .donate_food:nth-of-type(n+4) {
         display: none;
     }
 }
 
-@media (min-width: 768px) { 
-    .donate_food:nth-of-type(n-4){
+@media (min-width: 768px) {
+    .donate_food:nth-of-type(n-4) {
         display: block;
     }
-    .donate_food:nth-of-type(n+5){
+
+    .donate_food:nth-of-type(n+5) {
         display: none;
     }
 }
 
-@media (min-width: 992px) { 
-    .video_div{
+@media (min-width: 992px) {
+    .video_div {
         flex: 1;
         margin-top: 20px;
         padding-left: 2px;
     }
-    .video_section{
+
+    .video_section {
         display: flex;
         width: 100%;
         flex-direction: row;
         align-items: stretch;
     }
-    .top_section{
+
+    .top_section {
         flex: 1;
     }
-    .card_text{
+
+    .card_text {
         padding: 17px 25px;
         font-size: 14px;
     }
 }
+
 @media (min-width: 1100px) {
     .foods {
-    display: flex;
-    justify-content: space-between;
-    gap: 5%;
-    width: 80%;
+        display: flex;
+        justify-content: space-between;
+        gap: 5%;
+        width: 80%;
+    }
+
+    .more {
+        width: 80%;
+    }
 }
-.more{
-    width: 80%;
-}
-}
+
 @media (min-width: 1200px) {
     .foods {
-    display: flex;
-    justify-content: space-between;
-    gap: initial;
-    width: 75%;
+        display: flex;
+        justify-content: space-between;
+        gap: initial;
+        width: 75%;
+    }
+
+    .more {
+        width: 75%;
+    }
 }
-.more{
-    width: 75%;
-}
-}
+
 @media (min-width: 1600px) {
     .foods {
-    display: flex;
-    justify-content: space-between;
-    gap: initial;
-    width: 60%;
-}
-.more{
-    width: 60%;
-}
-}
-</style>
+        display: flex;
+        justify-content: space-between;
+        gap: initial;
+        width: 60%;
+    }
+
+    .more {
+        width: 60%;
+    }
+}</style>
