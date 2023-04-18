@@ -17,6 +17,43 @@ const resetMenu = ((device) => {
   publicOpen.value = false
   loginOpen.value = false
 })
+// chat gpt 給的版本 我覺得可以更好
+// const resetMore = (type) => {
+//   const resetValues = {
+//     about: [aboutOpen, false],
+//     donate: [donateOpen, false],
+//     public: [publicOpen, false],
+//     login: [loginOpen, false]
+//   };
+  
+//   for (const [key, value] of Object.entries(resetValues)) {
+//     console.log(key);
+//     console.log(value);
+//     if (key !== type) {
+//       value[0].value = value[1];
+//     }
+//   }
+
+//   resetValues[type][0].value = !resetValues[type][0].value;
+// };
+
+//我的版本
+const resetMore = (type) => {
+  const resetValues = {
+    about: aboutOpen,
+    donate: donateOpen,
+    public: publicOpen,
+    login: loginOpen
+  };
+  
+  for (const [key, value] of Object.entries(resetValues)) {
+    if (key !== type) {
+      value.value = false;
+    }
+  }
+
+  resetValues[type].value = !resetValues[type].value;
+};
 
 
 </script>
@@ -25,11 +62,11 @@ const resetMenu = ((device) => {
     <!-- 桌機板 -->
     <div class="ham_tilte_wrap">
       <div class="hamburger" @click="isOpen = !isOpen"><img src="assets/hamburger.svg" alt=""></div>
-      <div class="title"><router-link to="/" @click="resetMenu('logo')"><img src="assets/title.svg" alt=""></router-link>></div>
+      <div class="title"><router-link to="/" @click="resetMenu('logo')"><img src="assets/title.svg" alt=""></router-link></div>
       <div class="navbar_768">
         <ul class="navbar_768_title">
-          <li><router-link to="/about" @click="resetMenu('pc')">關於協會</router-link><span class="more"
-              @click="aboutOpen = !aboutOpen"><i class="fa-solid fa-greater-than"></i></span>
+          <li><router-link to="/about" @click="resetMenu('pc')">關於協會</router-link><span class="more" @click="resetMore('about')"
+             ><i class="fa-solid fa-greater-than"></i></span>
             <div class="submenu" v-if="aboutOpen">
               <ul>
                 <li><router-link to="/about" @click="resetMenu('pc')">協會介紹</router-link></li>
@@ -40,7 +77,7 @@ const resetMenu = ((device) => {
             </div>
           </li>
           <li><router-link to="/donate" @click="resetMenu('pc')">線上捐款</router-link><span class="more"
-              @click="donateOpen = !donateOpen"><i class="fa-solid fa-greater-than"></i></span>
+            @click="resetMore('donate')"><i class="fa-solid fa-greater-than"></i></span>
             <div class="submenu" v-if="donateOpen">
               <ul>
                 <li><router-link to="/donate" @click="resetMenu('pc')">線上刷卡</router-link></li>
@@ -53,7 +90,7 @@ const resetMenu = ((device) => {
           <li><router-link to="/food" @click="resetMenu('pc')">線上捐糧</router-link></li>
           <li><router-link to="/feed" @click="resetMenu('pc')">線上助養</router-link></li>
           <li><router-link to="/public" @click="resetMenu('pc')">公益義賣</router-link><span class="more"
-              @click="publicOpen = !publicOpen"><i class="fa-solid fa-greater-than"></i></span>
+            @click="resetMore('public')"><i class="fa-solid fa-greater-than"></i></span>
             <div class="submenu" v-if="publicOpen">
               <ul>
                 <li><router-link to="/public" @click="resetMenu('pc')">物資捐贈</router-link></li>
@@ -64,7 +101,7 @@ const resetMenu = ((device) => {
           <li><router-link to="/volunteer" @click="resetMenu('pc')">志工招募</router-link></li>
           <li><router-link to="/contact" @click="resetMenu('pc')">聯絡我們</router-link></li>
           <li><router-link to="/login" @click="resetMenu('pc')">登入</router-link><span class="more"
-              @click="loginOpen = !loginOpen"><i class="fa-solid fa-greater-than"></i></span>
+            @click="resetMore('login')"><i class="fa-solid fa-greater-than"></i></span>
             <div class="submenu" v-if="loginOpen">
               <ul>
                 <li><router-link to="/login" @click="resetMenu('pc')">個人檔案</router-link></li>

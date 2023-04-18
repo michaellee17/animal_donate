@@ -13,7 +13,7 @@ const props = defineProps({
 });
 </script>
 <template>
-    <div>
+    <div class="container">
         <div class="top_wrapper">
             <div class="page_title">{{ pageTitle }}</div>
              <img :src="imageSrc" alt="">
@@ -28,9 +28,12 @@ const props = defineProps({
 img {
     width: 100%;
 }
-
+.container{
+    position: relative;
+}
 .top_wrapper {
     position: relative;
+    z-index:-1;
 }
 
 .page_title {
