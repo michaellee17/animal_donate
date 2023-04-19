@@ -42,6 +42,9 @@ const props = defineProps({
    
 </template>
 <style scoped>
+.input_section input{
+    text-indent:30px;
+}
 .card{
     padding:10px;
     width: 150px;

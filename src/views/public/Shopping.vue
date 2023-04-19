@@ -1,5 +1,18 @@
+<script setup>
+import AboutTopVue from '../../components/Others/AboutTop.vue';
+import FoodCard from '../../components/Others/FoodCard.vue';
+</script>
 <template>
-    <div>
-        shopping
+    <AboutTopVue pageTitle="線上購物" imageSrc="/assets/indexTop.png" />
+    <div class="card_section">
+        <FoodCard foodText="NOBD+ 真無線藍芽耳機 4980元" imageSrc="/assets/indexTop.png" />
     </div>
 </template>
+<style scoped>
+.card_section{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding:15px 0;
+}
+</style>
