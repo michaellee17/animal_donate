@@ -47,7 +47,7 @@ const props = defineProps({
 }
 .card{
     padding:10px;
-    width: 150px;
+    width: 170px;
 }
 .card_img{
     display: flex;
@@ -72,6 +72,7 @@ img{
     display: flex;
     justify-content: center;
     gap:10px;
+    height: 20px;
 }
 
 .input_section input{

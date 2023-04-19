@@ -1,8 +1,13 @@
 <script setup>
-
-import { ElButton } from 'element-plus'
 import Header from './components/Header/Header.vue'
 import Footer from './components/Footer/Footer.vue'
+import { computed } from 'vue';
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const hideFooter = computed(() => {
+      return route.meta.hideFooter || false
+})
 </script>
 
 <template>
@@ -11,7 +16,7 @@ import Footer from './components/Footer/Footer.vue'
   
   <router-view/>
 
-  <Footer/>
+  <Footer v-if="!hideFooter"/>
 
 </template>
 

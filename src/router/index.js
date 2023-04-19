@@ -106,17 +106,26 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: Login,
+    meta: {
+      hideFooter: true // 需要 Footer 元件
+    }
   },
   {
     path: '/login/record',
     name: 'Record',
-    component: Record
+    component: Record,
+    meta: {
+      hideFooter: true // 需要 Footer 元件
+    },
   },
   {
     path: '/login/logout',
     name: 'Logout',
-    component: Logout
+    component: Logout,
+    meta: {
+      hideFooter: true // 需要 Footer 元件
+    },
   },
   {
     path: '/more',
