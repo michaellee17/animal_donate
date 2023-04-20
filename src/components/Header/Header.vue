@@ -61,8 +61,8 @@ const resetMore = (type) => {
   <nav class="navbar">
     <!-- 桌機板 -->
     <div class="ham_tilte_wrap">
-      <div class="hamburger" @click="isOpen = !isOpen"><img src="assets/hamburger.svg" alt=""></div>
-      <div class="title"><router-link to="/" @click="resetMenu('logo')"><img src="assets/title.svg" alt=""></router-link></div>
+      <div class="hamburger" @click="isOpen = !isOpen"><img src="/assets/hamburger.svg" alt=""></div>
+      <div class="title"><router-link to="/" @click="resetMenu('logo')"><img src="/assets/title.svg" alt=""></router-link></div>
       <div class="navbar_768">
         <ul class="navbar_768_title">
           <li><router-link to="/about" @click="resetMenu('pc')">關於協會</router-link><span class="more" @click="resetMore('about')"
@@ -104,7 +104,7 @@ const resetMore = (type) => {
             @click="resetMore('login')"><i class="fa-solid fa-greater-than"></i></span>
             <div class="submenu" v-if="loginOpen">
               <ul>
-                <li><router-link to="/login" @click="resetMenu('pc')">個人檔案</router-link></li>
+                <li><router-link to="/login/personal" @click="resetMenu('pc')">個人檔案</router-link></li>
                 <li><router-link to="/login/record" @click="resetMenu('pc')">會員紀錄</router-link></li>
                 <li><router-link to="/login/logout" @click="resetMenu('pc')">登出</router-link></li>
               </ul>
@@ -151,7 +151,7 @@ const resetMore = (type) => {
           @click="loginOpen = !loginOpen"><i class="fa-solid fa-greater-than"></i></span></li>
       <div class="submenu" v-if="loginOpen">
         <ul>
-          <li><router-link to="/login" @click="resetMenu('mobile')">個人檔案</router-link></li>
+          <li><router-link to="/login/personal" @click="resetMenu('mobile')">個人檔案</router-link></li>
           <li><router-link to="/login/record" @click="resetMenu('mobile')">會員紀錄</router-link></li>
           <li><router-link to="/login/logout" @click="resetMenu('mobile')">登出</router-link></li>
         </ul>

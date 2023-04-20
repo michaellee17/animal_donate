@@ -16,13 +16,13 @@
             </div>
         </div>
         <div class="flogo">
-            <img src="assets/footer.svg" alt="">
+            <img src="/assets/footer.svg" alt="">
         </div>
         <div class="socials">
             <div class="icons">
-                <img src="assets/ig.svg" alt="">
-                <img src="assets/fb.svg" alt="">
-                <img src="assets/line.svg" alt="">
+                <img src="/assets/ig.svg" alt="">
+                <img src="/assets/fb.svg" alt="">
+                <img src="/assets/line.svg" alt="">
             </div>
         </div>
     </div>

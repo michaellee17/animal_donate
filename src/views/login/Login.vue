@@ -39,6 +39,10 @@
     </div>
 </template>
 <style scoped>
+.register button a{
+  text-decoration: none;
+  color:black;
+}
   .normal_login button{
     min-width:230px;
     min-height: 40px;

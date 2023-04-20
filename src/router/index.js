@@ -23,9 +23,11 @@ import Volunteer from '../views/Volunteer.vue';
 import Contact from '../views/Contact.vue';
 
 import Login from '../views/login/Login.vue';
+import Personal from '../views/login/Personal.vue';
 import Record from '../views/login/Record.vue';
 import Logout from '../views/login/Logout.vue';
 import Register from '../views/login/Register.vue';
+import Completed from '../views/login/Completed.vue';
 
 import More from '../views/More.vue';
 const routes = [
@@ -113,6 +115,14 @@ const routes = [
     }
   },
   {
+    path: '/login/personal',
+    name: 'Personal',
+    component: Personal,
+    meta: {
+      hideFooter: true 
+    }
+  },
+  {
     path: '/login/record',
     name: 'Record',
     component: Record,
@@ -132,6 +142,14 @@ const routes = [
     path: '/login/register',
     name: 'Register',
     component: Register,
+    meta: {
+      hideFooter: true 
+    },
+  },
+  {
+    path: '/login/completed',
+    name: 'Completed',
+    component: Completed,
     meta: {
       hideFooter: true 
     },
