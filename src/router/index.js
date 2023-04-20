@@ -25,6 +25,7 @@ import Contact from '../views/Contact.vue';
 import Login from '../views/login/Login.vue';
 import Record from '../views/login/Record.vue';
 import Logout from '../views/login/Logout.vue';
+import Register from '../views/login/Register.vue';
 
 import More from '../views/More.vue';
 const routes = [
@@ -108,7 +109,7 @@ const routes = [
     name: 'Login',
     component: Login,
     meta: {
-      hideFooter: true // 需要 Footer 元件
+      hideFooter: true 
     }
   },
   {
@@ -116,7 +117,7 @@ const routes = [
     name: 'Record',
     component: Record,
     meta: {
-      hideFooter: true // 需要 Footer 元件
+      hideFooter: true 
     },
   },
   {
@@ -124,7 +125,15 @@ const routes = [
     name: 'Logout',
     component: Logout,
     meta: {
-      hideFooter: true // 需要 Footer 元件
+      hideFooter: true 
+    },
+  },
+  {
+    path: '/login/register',
+    name: 'Register',
+    component: Register,
+    meta: {
+      hideFooter: true 
     },
   },
   {
