@@ -147,7 +147,7 @@ const resetMore = (type) => {
       </div>
       <li><router-link to="/volunteer" @click="resetMenu('mobile')">志工招募</router-link></li>
       <li><router-link to="/contact" @click="resetMenu('mobile')">聯絡我們</router-link></li>
-      <li><router-link to="/login" @click="resetMenu('mobile')">登入</router-link><span class="more"
+      <li><router-link to="/login" @click="resetMenu('mobile')">登入&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</router-link><span class="more"
           @click="loginOpen = !loginOpen"><i class="fa-solid fa-greater-than"></i></span></li>
       <div class="submenu" v-if="loginOpen">
         <ul>
@@ -204,13 +204,13 @@ const resetMore = (type) => {
 }
 
 i {
-  font-size: 28px;
+  font-size: 16px;
 }
 
 .navbar-menu a {
   text-decoration-line: none;
-  color: white;
-  font-size: 20px;
+  color: black;
+  font-size: 18px;
   padding-top: 0px;
 }
 
@@ -224,20 +224,24 @@ i {
 }
 
 .navbar-menu {
-  padding: 5px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  background-color: rgb(15, 15, 15);
+  gap: 20px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  box-sizing: border-box;
 }
 
 .navbar-menu li {
   list-style: none;
-  color: #fff;
-  width: 160px;
+  color: #000;
   display: flex;
-  justify-content: space-between;
-  vertical-align: bottom;
+  align-items: center;
 }
 
 .navbar-toggle {
@@ -252,7 +256,6 @@ i {
   height: 11px;
   position: relative;
 }
-
 @media (min-width: 768px) {
   .title {
     margin-bottom: 10px;
