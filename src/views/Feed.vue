@@ -3,11 +3,11 @@ import AboutTopVue from '../components/Others/AboutTop.vue';
 
 </script>
 <template>
-    <AboutTopVue pageTitle="線上助養" imageSrc="/assets/indexTop.png" />
+    <AboutTopVue pageTitle="線上助養" imageSrc="/assets/feed.png" />
     <div class="card_section">
        <div class="feed_card">
             <div class="img_section">
-                <img src="/assets/indexTop.png" alt="">
+                <img src="/assets/feed02.png" alt="">
             </div>
             <div class="text_section">
                 <h3>Jeff</h3>

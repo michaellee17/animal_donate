@@ -26,7 +26,7 @@ const ChangeArea = ((area) =>{
 </script>
 <template>
     <AboutTopVue pageTitle="募款箱地圖"
-      imageSrc="/assets/indexTop.png"/>
+      imageSrc="/assets/boxmap.png"/>
     <div class="areas">
        <div class="tabs">
             <div class="tab" :class="{ active: northActive }" @click="ChangeArea('n')">北區</div>

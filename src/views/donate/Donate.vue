@@ -5,12 +5,13 @@
         </div>
         <div class="buttons">
             <button type="button">線上刷卡</button>
+            <button type="button">定期捐款</button>
             <button type="button">ATM轉帳</button>
             <button type="button">郵政劃撥</button>
         </div>
     </div>
     <div class="form_img">
-        <img src="/assets/indexTop.png" alt="">
+        <img src="/assets/donate_table.png" alt="">
     </div>
     <div class="donate_text">
         <p>捐款捐款捐款捐款捐款捐款捐款捐款捐款</p>

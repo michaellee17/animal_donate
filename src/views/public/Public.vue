@@ -3,9 +3,9 @@ import AboutTopVue from '../../components/Others/AboutTop.vue';
 import FoodCard from '../../components/Others/FoodCard.vue';
 </script>
 <template>
-    <AboutTopVue pageTitle="物資捐贈" imageSrc="/assets/indexTop.png" />
+    <AboutTopVue pageTitle="物資捐贈" imageSrc="/assets/item02.png" />
     <div class="card_section">
-        <FoodCard foodText="寵物護理凝膠 200元" imageSrc="/assets/indexTop.png" />
+        <FoodCard foodText="寵物護理凝膠 200元" imageSrc="/assets/item.png" />
     </div>
 </template>
 <style scoped>

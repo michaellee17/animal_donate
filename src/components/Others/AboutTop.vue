@@ -29,9 +29,11 @@ img {
     width: 100%;
 }
 .container{
+    width: 100%;
     position: relative;
 }
 .top_wrapper {
+    width: 100%;
     position: relative;
     z-index:-1;
 }

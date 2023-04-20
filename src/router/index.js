@@ -7,6 +7,7 @@ import Report from '../views/about/Report.vue';
 import BoxMap from '../views/about/BoxMap.vue';
 
 import Donate from '../views/donate/Donate.vue';
+import Online from '../views/donate/Online.vue';
 import Regular from '../views/donate/Regular.vue';
 import Post from '../views/donate/Post.vue';
 import ATM from '../views/donate/ATM.vue';
@@ -60,6 +61,11 @@ const routes = [
     path: '/donate',
     name: 'Donate',
     component: Donate
+  },
+  {
+    path: '/donate/online',
+    name: 'Online',
+    component: Online
   },
   {
     path: '/donate/regular',

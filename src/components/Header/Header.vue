@@ -80,7 +80,7 @@ const resetMore = (type) => {
             @click="resetMore('donate')"><i class="fa-solid fa-greater-than"></i></span>
             <div class="submenu" v-if="donateOpen">
               <ul>
-                <li><router-link to="/donate" @click="resetMenu('pc')">線上刷卡</router-link></li>
+                <li><router-link to="/donate/online" @click="resetMenu('pc')">線上刷卡</router-link></li>
                 <li><router-link to="/donate/regular" @click="resetMenu('pc')">定期捐款</router-link></li>
                 <li><router-link to="/donate/post" @click="resetMenu('pc')">郵政劃撥</router-link></li>
                 <li><router-link to="/donate/atm" @click="resetMenu('pc')">ATM轉帳</router-link></li>
@@ -129,7 +129,7 @@ const resetMore = (type) => {
           @click="donateOpen = !donateOpen"><i class="fa-solid fa-greater-than"></i></span></li>
       <div class="submenu" v-if="donateOpen">
         <ul>
-          <li><router-link to="/donate" @click="resetMenu('mobile')">線上刷卡</router-link></li>
+          <li><router-link to="/donate/online" @click="resetMenu('mobile')">線上刷卡</router-link></li>
           <li><router-link to="/donate/regular" @click="resetMenu('mobile')">定期捐款</router-link></li>
           <li><router-link to="/donate/post" @click="resetMenu('mobile')">郵政劃撥</router-link></li>
           <li><router-link to="/donate/atm" @click="resetMenu('mobile')">ATM轉帳</router-link></li>
