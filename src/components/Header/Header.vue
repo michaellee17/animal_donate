@@ -115,6 +115,9 @@ const resetMore = (type) => {
     </div>
     <!-- 手機板 -->
     <ul class="navbar-menu" v-if="isOpen">
+      <div class="icoClose_div" @click="isOpen = !isOpen">
+        <img src="assets/icoClose.png" alt="">
+      </div>
       <li><router-link to="/about" @click="resetMenu('mobile')">關於協會</router-link><span class="more"
           @click="aboutOpen = !aboutOpen"><i class="fa-solid fa-greater-than"></i></span></li>
       <div class="submenu" v-if="aboutOpen">
@@ -224,7 +227,7 @@ i {
 }
 
 .navbar-menu {
-  padding: 50px;
+  padding: 30px 60px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -255,6 +258,15 @@ i {
   width: 14px;
   height: 11px;
   position: relative;
+}
+
+.icoClose_div{
+  width: 15px;
+  margin-left: -40px;
+}
+
+.icoClose_div img{
+  width: 100%;
 }
 @media (min-width: 768px) {
   .title {
