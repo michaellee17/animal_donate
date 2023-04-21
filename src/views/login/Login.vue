@@ -20,14 +20,14 @@
           <div class="login">
             <button>會員登入</button>
           </div>
-          <div class="fb">
-            <button>Facebook登入</button>
+          <div class="social">
+            <img src="/assets/fb.png" alt="">
           </div>
-          <div class="google">
-            <button>Google登入</button>
+          <div class="social">
+            <img src="/assets/google.png" alt="">
           </div>
-          <div class="line">
-            <button>Line登入</button>
+          <div class="social">
+            <img src="/assets/line.png" alt="">
           </div>
           <div class="or">
             <h2>或</h2>
@@ -46,6 +46,13 @@
   .normal_login button{
     min-width:230px;
     min-height: 40px;
+  }
+  .social{
+    width: 230px;
+    height: 40px;
+  }
+  .social img{
+    width: 100%;
   }
   .login_section{
     display: flex;
@@ -77,26 +84,6 @@
     background-color: white;
     border-radius: 5px;
    
-    border: 1px solid grey;
-  }
-  .fb button {
-    background-color: #3B59F3;
-    border-radius: 5px;
-    
-    border: none;
-    box-sizing: border-box;
-    max-width: 293px;
-  }
-  .google button{
-    background-color: white;
-    border-radius: 5px;
-    
-    border: 1px solid grey;
-  }
-  .line button{
-    background-color: green;
-    border-radius: 5px;
-    
     border: 1px solid grey;
   }
   .or{
