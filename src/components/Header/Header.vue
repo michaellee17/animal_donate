@@ -171,9 +171,11 @@ const resetMore = (type) => {
   padding: 10px;
   position: fixed;
   background-color: rgb(85, 37, 196);
+  z-index: 100;
 }
 
 .navbar-menu .submenu {
+  
   padding: 10px;
   background-color: rgb(85, 37, 196);
 }
