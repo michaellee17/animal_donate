@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="join">
-                <button><router-link to="/login/completed">加入會員</router-link></button>
+                <router-link to="/login/completed"><button>加入會員</button></router-link>
             </div>
         </div>    
     </div>

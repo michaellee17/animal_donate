@@ -33,16 +33,13 @@
             <h2>或</h2>
           </div>
           <div class="register">
-            <button><router-link to="/login/register">註冊會員</router-link></button>
+            <router-link to="/login/register"><button>註冊會員</button></router-link>
           </div>
         </div>
     </div>
 </template>
 <style scoped>
-.register button a{
-  text-decoration: none;
-  color:black;
-}
+
   .normal_login button{
     min-width:230px;
     min-height: 40px;

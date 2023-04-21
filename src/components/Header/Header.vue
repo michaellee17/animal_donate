@@ -66,7 +66,7 @@ const resetMore = (type) => {
       <div class="navbar_768">
         <ul class="navbar_768_title">
           <li><router-link to="/about" @click="resetMenu('pc')">關於協會</router-link><span class="more" @click="resetMore('about')"
-             ><i class="fa-solid fa-greater-than"></i></span>
+             ><img src="/assets/arrow.svg" alt=""></span>
             <div class="submenu" v-if="aboutOpen">
               <ul>
                 <li><router-link to="/about" @click="resetMenu('pc')">協會介紹</router-link></li>
@@ -77,7 +77,7 @@ const resetMore = (type) => {
             </div>
           </li>
           <li><router-link to="/donate" @click="resetMenu('pc')">線上捐款</router-link><span class="more"
-            @click="resetMore('donate')"><i class="fa-solid fa-greater-than"></i></span>
+            @click="resetMore('donate')"><img src="/assets/arrow.svg" alt=""></span>
             <div class="submenu" v-if="donateOpen">
               <ul>
                 <li><router-link to="/donate/online" @click="resetMenu('pc')">線上刷卡</router-link></li>
@@ -90,7 +90,7 @@ const resetMore = (type) => {
           <li><router-link to="/food" @click="resetMenu('pc')">線上捐糧</router-link></li>
           <li><router-link to="/feed" @click="resetMenu('pc')">線上助養</router-link></li>
           <li><router-link to="/public" @click="resetMenu('pc')">公益義賣</router-link><span class="more"
-            @click="resetMore('public')"><i class="fa-solid fa-greater-than"></i></span>
+            @click="resetMore('public')"><img src="/assets/arrow.svg" alt=""></span>
             <div class="submenu" v-if="publicOpen">
               <ul>
                 <li><router-link to="/public" @click="resetMenu('pc')">物資捐贈</router-link></li>
@@ -101,7 +101,7 @@ const resetMore = (type) => {
           <li><router-link to="/volunteer" @click="resetMenu('pc')">志工招募</router-link></li>
           <li><router-link to="/contact" @click="resetMenu('pc')">聯絡我們</router-link></li>
           <li><router-link to="/login" @click="resetMenu('pc')">登入</router-link><span class="more"
-            @click="resetMore('login')"><i class="fa-solid fa-greater-than"></i></span>
+            @click="resetMore('login')"><img src="/assets/arrow.svg" alt=""></span>
             <div class="submenu" v-if="loginOpen">
               <ul>
                 <li><router-link to="/login/personal" @click="resetMenu('pc')">個人檔案</router-link></li>
@@ -119,7 +119,7 @@ const resetMore = (type) => {
         <img src="assets/icoClose.png" alt="">
       </div>
       <li><router-link to="/about" @click="resetMenu('mobile')">關於協會</router-link><span class="more"
-          @click="aboutOpen = !aboutOpen"><i class="fa-solid fa-greater-than"></i></span></li>
+          @click="aboutOpen = !aboutOpen"><img src="/assets/arrow.svg" alt=""></span></li>
       <div class="submenu" v-if="aboutOpen">
         <ul>
           <li><router-link to="/about" @click="resetMenu('mobile')">協會介紹</router-link></li>
@@ -129,7 +129,7 @@ const resetMore = (type) => {
         </ul>
       </div>
       <li><router-link to="/donate" @click="resetMenu('mobile')">線上捐款</router-link><span class="more"
-          @click="donateOpen = !donateOpen"><i class="fa-solid fa-greater-than"></i></span></li>
+          @click="donateOpen = !donateOpen"><img src="/assets/arrow.svg" alt=""></span></li>
       <div class="submenu" v-if="donateOpen">
         <ul>
           <li><router-link to="/donate/online" @click="resetMenu('mobile')">線上刷卡</router-link></li>
@@ -141,7 +141,7 @@ const resetMore = (type) => {
       <li><router-link to="/food" @click="resetMenu('mobile')">線上捐糧</router-link></li>
       <li><router-link to="/feed" @click="resetMenu('mobile')">線上助養</router-link></li>
       <li><router-link to="/public" @click="resetMenu('mobile')">公益義賣</router-link><span class="more"
-          @click="publicOpen = !publicOpen"><i class="fa-solid fa-greater-than"></i></span></li>
+          @click="publicOpen = !publicOpen"><img src="/assets/arrow.svg" alt=""></span></li>
       <div class="submenu" v-if="publicOpen">
         <ul>
           <li><router-link to="/public" @click="resetMenu('mobile')">物資捐贈</router-link></li>
@@ -151,7 +151,7 @@ const resetMore = (type) => {
       <li><router-link to="/volunteer" @click="resetMenu('mobile')">志工招募</router-link></li>
       <li><router-link to="/contact" @click="resetMenu('mobile')">聯絡我們</router-link></li>
       <li><router-link to="/login" @click="resetMenu('mobile')">登入&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</router-link><span class="more"
-          @click="loginOpen = !loginOpen"><i class="fa-solid fa-greater-than"></i></span></li>
+          @click="loginOpen = !loginOpen"><img src="/assets/arrow.svg" alt=""></span></li>
       <div class="submenu" v-if="loginOpen">
         <ul>
           <li><router-link to="/login/personal" @click="resetMenu('mobile')">個人檔案</router-link></li>

@@ -4,10 +4,10 @@
             <h3>線上捐款方式</h3>
         </div>
         <div class="buttons">
-            <button type="button">線上刷卡</button>
-            <button type="button">定期捐款</button>
-            <button type="button">ATM轉帳</button>
-            <button type="button">郵政劃撥</button>
+            <router-link to="/donate/online"><button>線上刷卡</button></router-link>
+            <router-link to="/donate/regular"><button>定期捐款</button></router-link>
+            <router-link to="/donate/atm"><button>ATM轉帳</button></router-link>
+            <router-link to="/donate/post"><button>郵政劃撥</button></router-link>
         </div>
     </div>
     <div class="form_img">
