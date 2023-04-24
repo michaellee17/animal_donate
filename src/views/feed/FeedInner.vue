@@ -42,8 +42,8 @@ const endModal = (()=>{
                 </p>
             </div>
             <div class="button_section">
-                <button type="button">我要助養</button>
-                <button type="button">我要領養</button>
+                <router-link to="/donate"><button type="button">我要助養</button></router-link>
+                <router-link to="/contact"><button type="button">我要領養</button></router-link>
             </div>
             <div class="discribe">
                 <p>描述</p>
@@ -63,8 +63,8 @@ const endModal = (()=>{
                 <img class="big" src="/assets/feed02.png" alt="">
             </div>
             <div class="button_section">
-                <button type="button">我要助養</button>
-                <button type="button">我要領養</button>
+                <router-link to="/donate"><button type="button">我要助養</button></router-link>
+                <router-link to="/contact"><button type="button">我要領養</button></router-link>
             </div>
             <div class="rule">
                 <h4>領養須知</h4>
@@ -80,9 +80,8 @@ const endModal = (()=>{
     </div>
     <div class="lightbox" v-if="lvisible">
         <div class="mask" @click="endModal">
-            <img class="big" src="/assets/feed02.png" alt="">
+            <img class="full" src="/assets/feed02.png" alt="" @click.stop>
         </div>
-        
     </div>
 </template>
 <style scoped>
@@ -93,7 +92,12 @@ const endModal = (()=>{
     display: flex;
     align-items: center;
     overflow: hidden;
+    position: relative;
 }
+.full{
+    width: 100%;
+}
+
 .info {
     position: relative;
 }

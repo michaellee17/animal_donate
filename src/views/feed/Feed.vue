@@ -15,8 +15,8 @@ import AboutTopVue from '../../components/Others/AboutTop.vue';
                 <h4>未被領養</h4>
                 <p>今年一月原本在彰化流浪時被到下橡皮筋的Jeff，愛媽接到彰化志工求助去電想要帶出幫忙醫療...</p>
                 <div class="button_section">
-                    <button type="button">我要助養</button>
-                    <button type="button">我要領養</button>
+                    <router-link to="/donate"><button type="button">我要助養</button></router-link>
+                    <router-link to="/feed/inner"><button type="button">我要領養</button></router-link>
                 </div>
             </div>
        </div>

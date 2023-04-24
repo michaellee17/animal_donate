@@ -1,7 +1,28 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import {  Autoplay } from 'swiper';
+import { useRouter } from 'vue-router'
 import 'swiper/css';
+import { onMounted } from 'vue';
+import axios from 'axios';
+
+// onMounted(() => {
+//     axios.get('https://www.warmwarm.tw/api/banner', {
+//     })
+//   .then(response => {
+//     console.log(response);
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   });
+// });
+
+
+
+const router = useRouter()
+    const goToAboutPage = () => {
+      router.push('/more/inner')
+    }
 
 const modules = [Autoplay];
 </script>
@@ -23,14 +44,14 @@ const modules = [Autoplay];
             <section class="top_section">
                 <router-link to="/more" class="more_text">more ></router-link>
                 <div class="card_section">
-                    <div class="card">
+                    <div class="card" @click="goToAboutPage">
                         <img src="assets/indexCard1.png" alt="">
                         <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
                             建議看法</div>
                         <hr class="tilte_date_hr">
                         <div class="card_date">2023/04/11</div>
                     </div>
-                    <div class="card">
+                    <div class="card" @click="goToAboutPage">
                         <img src="assets/indexCard2.png" alt="">
                         <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
                             建議看法</div>

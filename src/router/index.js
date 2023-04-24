@@ -32,7 +32,8 @@ import Logout from '../views/login/Logout.vue';
 import Register from '../views/login/Register.vue';
 import Completed from '../views/login/Completed.vue';
 
-import More from '../views/More.vue';
+import More from '../views/more/More.vue';
+import MoreInner from '../views/more/MoreInner.vue';
 const routes = [
   {
     path: '/',
@@ -171,6 +172,11 @@ const routes = [
     path: '/more',
     name: 'More',
     component: More
+  },
+  {
+    path: '/more/inner',
+    name: 'MoreInner',
+    component: MoreInner
   },
 ];
 
