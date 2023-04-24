@@ -1,5 +1,5 @@
 <script setup>
-import AboutTopVue from '../components/Others/AboutTop.vue';
+import AboutTopVue from '../../components/Others/AboutTop.vue';
 
 </script>
 <template>
@@ -32,8 +32,8 @@ import AboutTopVue from '../components/Others/AboutTop.vue';
 }
 .button_section button{
     background-color: white;
-    font-size: 16px;
-    padding: 8px 25px;
+    font-size: 12px;
+    padding: 10px 15px;
     border-radius: 5px;
 }
 .card_section{

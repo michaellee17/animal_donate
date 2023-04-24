@@ -14,7 +14,9 @@ import ATM from '../views/donate/ATM.vue';
 
 import Food from '../views/Food.vue';
 
-import Feed from '../views/Feed.vue';
+
+import Feed from '../views/feed/Feed.vue';
+import FeedInner from '../views/feed/FeedInner.vue';
 
 import Public from '../views/public/Public.vue';
 import Shopping from '../views/public/Shopping.vue';
@@ -91,6 +93,11 @@ const routes = [
     path: '/feed',
     name: 'Feed',
     component: Feed
+  },
+  {
+    path:'/feed/inner',
+    name:'FeedInner',
+    component:FeedInner
   },
   {
     path: '/public',
