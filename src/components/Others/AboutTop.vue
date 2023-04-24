@@ -27,6 +27,8 @@ const props = defineProps({
 <style scoped>
 img {
     width: 100%;
+    display: block;
+    
 }
 .container{
     width: 100%;
@@ -40,11 +42,10 @@ img {
 
 .page_title {
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 24px;
-    font-weight: bold;
     color: white;
     text-align: center;
 }
@@ -59,7 +60,6 @@ img {
     justify-content: center;
     border: none;
     padding: 5px 0;
-    margin: 5px auto 8px auto;
-
+    margin: 15px auto 8px auto;
 }
 </style>

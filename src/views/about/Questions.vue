@@ -11,19 +11,15 @@ import AboutTopVue from '../../components/Others/AboutTop.vue';
 </template>
 <style scoped>
 
-
-
-
-
 .text_section {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 8px;
+    gap: 5px;
+    padding: 10px 30px 60px 30px;
 }
 
 .text_section p {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 </style>
