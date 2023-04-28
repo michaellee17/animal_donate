@@ -6,16 +6,16 @@ import 'swiper/css';
 import { onMounted } from 'vue';
 import axios from 'axios';
 
-// onMounted(() => {
-//     axios.get('https://www.warmwarm.tw/api/banner', {
-//     })
-//   .then(response => {
-//     console.log(response);
-//   })
-//   .catch(error => {
-//     console.log(error);
-//   });
-// });
+onMounted(() => {
+    axios.get('https://www.warmwarm.tw/api/banner', {
+    })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+});
 
 
 

@@ -49,8 +49,30 @@ img {
     color: white;
     text-align: center;
 }
+.donate_btn{
+        display: flex;
+        justify-content: center;
+        padding:2rem;
+}
+.donate_btn button{
+        background-color: rgb(183, 171, 161);
+        color: white;
+        border-radius: 3px;
+        border: none;
+        width: 50%;
+        height: 5vh;
+    }
 
-.donate_btn button {
+@media (min-width: 576px) { 
+      .donate_btn button{
+        width: 30%;
+    }
+}
+
+
+
+
+ /* .donate_btn button {
     width: 125px;
     background-color: rgb(183, 171, 161);
     color: white;
@@ -61,5 +83,5 @@ img {
     border: none;
     padding: 5px 0;
     margin: 15px auto 8px auto;
-}
+}  */
 </style>
