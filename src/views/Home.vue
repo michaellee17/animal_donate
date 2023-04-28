@@ -9,8 +9,8 @@ const banners = reactive({});
 onMounted(() => {
     axios.get('https://www.warmwarm.tw/api/banner', {})
         .then(response => {
-            console.log(response);
-            Object.assign(banners, response.data);
+            console.log(response.data.results);
+            Object.assign(banners, response.data.results);
         })
         .catch(error => {
             console.log(error);
