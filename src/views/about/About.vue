@@ -11,7 +11,7 @@ import AboutTopVue from '../../components/Others/AboutTop.vue';
 
     <div class="video_div">
         <video class="video" controls autoplay muted>
-            <source src="assets/video.mov" type="video/mp4">
+            <source src="assets/video.mp4" type="video/mp4">
         </video>
     </div>
 </template>
