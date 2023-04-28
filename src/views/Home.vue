@@ -1,40 +1,39 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import {  Autoplay } from 'swiper';
+import { Autoplay } from 'swiper';
 import { useRouter } from 'vue-router'
 import 'swiper/css';
-import { onMounted } from 'vue';
+import { onMounted, reactive } from 'vue';
 import axios from 'axios';
-
+const banners = reactive({});
 onMounted(() => {
-    axios.get('https://www.warmwarm.tw/api/banner', {
-    })
-  .then(response => {
-    console.log(response);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+    axios.get('https://www.warmwarm.tw/api/banner', {})
+        .then(response => {
+            console.log(response);
+            Object.assign(banners, response.data);
+        })
+        .catch(error => {
+            console.log(error);
+        });
 });
 
 
 
 const router = useRouter()
-    const goToAboutPage = () => {
-      router.push('/more/inner')
-    }
+const goToAboutPage = () => {
+    router.push('/more/inner')
+}
 
 const modules = [Autoplay];
 </script>
 <template>
     <div>
         <swiper :slides-per-view="1" :modules="modules" :autoplay="{ delay: 3000 }">
-            <swiper-slide><img src="assets/indexTop.png" alt=""></swiper-slide>
-            <swiper-slide><img src="assets/indexTop.png" alt=""></swiper-slide>
-            <swiper-slide><img src="assets/indexTop.png" alt=""></swiper-slide>
-
+            <swiper-slide v-for="banner in banners" :key="banner.id">
+                <img :src="banner.image" alt="">
+            </swiper-slide>
         </swiper>
-        
+
         <div class="video_section">
             <div class="video_div">
                 <video class="video" controls autoplay muted>
@@ -293,4 +292,5 @@ img {
     .more {
         width: 60%;
     }
-}</style>
+}
+</style>
