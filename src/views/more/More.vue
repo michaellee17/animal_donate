@@ -6,14 +6,14 @@ import AboutTopVue from '../../components/Others/AboutTop.vue';
     <AboutTopVue pageTitle="專欄文章" imageSrc="/assets/contact.png" />
     <div class="card_section">
         <div class="card" @click="goToAboutPage">
-            <img src="assets/indexCard1.png" alt="">
+            <img src="/assets/indexCard1.png" alt="">
             <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
                 建議看法</div>
             <hr class="tilte_date_hr">
             <div class="card_date">2023/04/11</div>
         </div>
         <div class="card" @click="goToAboutPage">
-            <img src="assets/indexCard2.png" alt="">
+            <img src="/assets/indexCard2.png" alt="">
             <div class="card_text">詹順貴專欄：對於流浪動物的處理困境與
                 建議看法</div>
             <hr class="tilte_date_hr">

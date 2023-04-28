@@ -116,7 +116,7 @@ const resetMore = (type) => {
     <!-- 手機板 -->
     <ul class="navbar-menu" v-if="isOpen">
       <div class="icoClose_div" @click="isOpen = !isOpen">
-        <img src="assets/icoClose.png" alt="">
+        <img src="/assets/icoClose.png" alt="">
       </div>
       <li><router-link to="/about" @click="resetMenu('mobile')">關於協會</router-link><span class="more"
           @click="aboutOpen = !aboutOpen"><img src="/assets/arrow.svg" alt=""></span></li>

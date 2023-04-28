@@ -7,8 +7,12 @@ import vue from '@vitejs/plugin-vue'
 
 
 export default defineConfig({
-  assetsInclude:['**/*.mov'],
   // ...
+  build: {
+    rollupOptions: {
+      external: ['/assets/video.mp4']
+    }
+  },
   plugins: [
     vue(),
     AutoImport({
