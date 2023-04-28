@@ -8,11 +8,6 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   // ...
-  build: {
-    rollupOptions: {
-      external: ['/assets/video.mp4']
-    }
-  },
   plugins: [
     vue(),
     AutoImport({
@@ -22,4 +17,5 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
   ],
+  base: "./"
 })
