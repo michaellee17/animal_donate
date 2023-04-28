@@ -37,7 +37,7 @@ const modules = [Autoplay];
         <div class="video_section">
             <div class="video_div">
                 <video class="video" controls autoplay muted>
-                    <source src="assets/video.mov" type="video/mp4">
+                    <source src="assets/video.mp4" type="video/mp4">
                 </video>
             </div>
             <section class="top_section">
