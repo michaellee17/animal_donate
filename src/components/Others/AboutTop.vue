@@ -52,7 +52,7 @@ img {
 .donate_btn{
         display: flex;
         justify-content: center;
-        padding:2rem;
+        padding:1rem;
 }
 .donate_btn button{
         background-color: rgb(183, 171, 161);

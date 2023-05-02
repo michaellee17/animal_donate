@@ -36,7 +36,7 @@ import AboutTopVue from '../../components/Others/AboutTop.vue';
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 10px 30px 60px 30px;
+    padding: 0 30px 60px 30px;
 }
 
 .text_section p {

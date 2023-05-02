@@ -170,14 +170,13 @@ const resetMore = (type) => {
 .navbar_768_title .submenu {
   padding: 10px;
   position: fixed;
-  background-color: rgb(85, 37, 196);
+  background-color: #FFF;
   z-index: 100;
 }
 
 .navbar-menu .submenu {
   
   padding: 10px;
-  background-color: rgb(85, 37, 196);
 }
 
 .submenu ul {

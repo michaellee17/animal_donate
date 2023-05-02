@@ -29,11 +29,11 @@ const ChangeArea = ((area) =>{
       imageSrc="/assets/boxmap.png"/>
     <div class="areas">
        <div class="tabs">
-            <div class="tab" :class="{ active: northActive }" @click="ChangeArea('n')">北區</div>
+            <div class="tab" :class="{ active: northActive }" @click="ChangeArea('n')">北部</div>
             <span>|</span>
-            <div class="tab" :class="{ active: middleActive }" @click="ChangeArea('m')">中區</div>
+            <div class="tab" :class="{ active: middleActive }" @click="ChangeArea('m')">中部</div>
             <span>|</span>
-            <div class="tab" :class="{ active: southActvie }" @click="ChangeArea('s')">南區</div>
+            <div class="tab" :class="{ active: southActvie }" @click="ChangeArea('s')">南部</div>
        </div>
        <div class="shops north" v-if="northActive">
             <div class="shop">
@@ -106,7 +106,7 @@ const ChangeArea = ((area) =>{
 .shops{
     display: flex;
     flex-direction: column;
-    gap:15px;
+    gap:30px;
     padding:5px;
 }
 
