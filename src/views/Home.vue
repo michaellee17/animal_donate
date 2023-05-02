@@ -3,9 +3,12 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay } from 'swiper';
 import { useRouter } from 'vue-router'
 import 'swiper/css';
-import { onMounted, reactive } from 'vue';
+import { onBeforeMount, onMounted, reactive } from 'vue';
 import axios from 'axios';
 const banners = reactive({});
+onBeforeMount(() => {
+    banners.loading = true; // 增加 loading 狀態，預設為 true
+});
 onMounted(() => {
     axios.get('https://www.warmwarm.tw/api/banner', {})
         .then(response => {
@@ -30,7 +33,8 @@ const modules = [Autoplay];
     <div>
         <swiper :slides-per-view="1" :modules="modules" :autoplay="{ delay: 3000 }">
             <swiper-slide v-for="banner in banners" :key="banner.id">
-                <img :src="banner.image" alt="">
+                <img :src="banner.image" alt="" v-if="!banners.loading && banners[banner.id].loaded"
+                    @load="banners[banner.id].loaded = true">
             </swiper-slide>
         </swiper>
 
