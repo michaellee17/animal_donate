@@ -3,21 +3,26 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay } from 'swiper';
 import { useRouter } from 'vue-router'
 import 'swiper/css';
-import { onBeforeMount, onMounted, reactive } from 'vue';
+import { onBeforeMount, onMounted, reactive,ref } from 'vue';
 import axios from 'axios';
 const banners = reactive({});
-onBeforeMount(() => {
-    banners.loading = true; // 增加 loading 狀態，預設為 true
-});
+const loading = ref(true)
+
 onMounted(() => {
-    axios.get('https://www.warmwarm.tw/api/banner', {})
-        .then(response => {
-            console.log(response.data.results);
-            Object.assign(banners, response.data.results);
-        })
-        .catch(error => {
-            console.log(error);
-        });
+  if (localStorage.getItem('banner')) {
+    Object.assign(banners, JSON.parse(localStorage.getItem('banner')));
+    loading.value = false;
+  } else {
+    axios.get('https://www.warmwarm.tw/api/banner/', {})
+      .then(response => {
+        Object.assign(banners, response.data.results);
+        loading.value = false;
+        localStorage.setItem('banner', JSON.stringify(banners));
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
 });
 
 
@@ -31,10 +36,9 @@ const modules = [Autoplay];
 </script>
 <template>
     <div>
-        <swiper :slides-per-view="1" :modules="modules" :autoplay="{ delay: 3000 }">
+        <swiper v-if="!loading" :slides-per-view="1" :modules="modules" :autoplay="{ delay: 3000 }">
             <swiper-slide v-for="banner in banners" :key="banner.id">
-                <img :src="banner.image" alt="" v-if="!banners.loading && banners[banner.id].loaded"
-                    @load="banners[banner.id].loaded = true">
+                <img :src="banner.image" alt="">
             </swiper-slide>
         </swiper>
 
