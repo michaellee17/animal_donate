@@ -21,7 +21,7 @@ const props = defineProps({
             <h4>{{title}}</h4>
         </div>
         <div class="process">
-            <img src="/assets/process.png" alt="">
+            <keep-alive><img src="/assets/process.png" alt=""></keep-alive>
         </div>
         <div class="money">
             <div class="money_title">

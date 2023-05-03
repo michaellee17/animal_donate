@@ -2,10 +2,10 @@
 import AboutTopVue from '../../components/Others/AboutTop.vue';
 </script>
 <template>
-    <keep-alive>
+    
         <AboutTopVue pageTitle="協會介紹"
-        imageSrc="/assets/about.png"/>
-    </keep-alive>
+        nimageSrc="/assets/about.png"/>
+   
     
     <div class="text_section">
         <p class="one_p">關於台灣有點溫暖毛孩協會，只要每個人心中有那麼一點溫暖，就可以用愛照亮流浪動物們</p>
