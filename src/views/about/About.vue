@@ -4,7 +4,7 @@ import AboutTopVue from '../../components/Others/AboutTop.vue';
 <template>
     <keep-alive>
         <AboutTopVue pageTitle="協會介紹"
-        imageSrc="/assets/about.png"/>
+        imageSrc="/assets/about.jpg"/>
     </keep-alive>
     
     <div class="text_section">

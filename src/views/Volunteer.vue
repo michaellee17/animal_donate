@@ -3,7 +3,7 @@ import AboutTopVue from '../components/Others/AboutTop.vue';
 
 </script>
 <template>
-    <AboutTopVue pageTitle="志工招募" imageSrc="/assets/volunteer.png" />
+    <AboutTopVue pageTitle="志工招募" imageSrc="/assets/volunteer.jpg" />
     <div class="text_section">
         <div class="texts">
             <p>123213213133</p>

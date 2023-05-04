@@ -3,7 +3,7 @@ import AboutTopVue from '../../components/Others/AboutTop.vue';
 
 </script>
 <template>
-    <AboutTopVue pageTitle="專欄文章" imageSrc="/assets/contact.png" />
+    <AboutTopVue pageTitle="專欄文章" imageSrc="/assets/blog.jpg" />
     <div class="card_section">
         <div class="card" @click="goToAboutPage">
             <img src="/assets/indexCard1.png" alt="">

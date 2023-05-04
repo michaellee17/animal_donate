@@ -3,7 +3,7 @@ import AboutTopVue from '../../components/Others/AboutTop.vue';
 
 </script>
 <template>
-    <AboutTopVue pageTitle="線上助養" imageSrc="/assets/feed.png" />
+    <AboutTopVue pageTitle="線上助養" imageSrc="/assets/feed.jpg" />
     <div class="card_section">
        <div class="feed_card">
             <div class="img_section">
