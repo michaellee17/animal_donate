@@ -36,6 +36,7 @@ const modules = [Autoplay];
 </script>
 <template>
     <div>
+        <img v-if="loading" src="/assets/bn-01.jpg" alt="">
         <swiper v-if="!loading" :slides-per-view="1" :modules="modules" :autoplay="{ delay: 3000 }">
             <swiper-slide v-for="banner in banners" :key="banner.id">
                 <img :src="banner.image" alt="">
