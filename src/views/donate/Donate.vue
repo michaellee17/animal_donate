@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="form_img">
-        <img src="/assets/donate_table.png" alt="">
+        <keep-alive><img src="/assets/donate_table.png" alt=""></keep-alive>
     </div>
     <div class="donate_text">
         <p>捐款捐款捐款捐款捐款捐款捐款捐款捐款</p>

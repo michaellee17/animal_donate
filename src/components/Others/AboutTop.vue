@@ -16,7 +16,7 @@ const props = defineProps({
     <div class="container">
         <div class="top_wrapper">
             <div class="page_title">{{ pageTitle }}</div>
-             <img :src="imageSrc" alt="">
+            <keep-alive><img :src="imageSrc" alt=""></keep-alive>
         </div>
         <div class="donate_btn">
             <button type="button">立即線上捐款</button>
